@@ -89,7 +89,7 @@ App.de_gigatec_zabbix_ZabbixStatus = Ember.Object.extend({
 				'lastchange':    value.lastchange,
 				'age':           $.timeDiff(value.lastchange * 1000, new Date().getTime()),
 				'confirmed':     0,
-				'system':        value.hostname,
+				'system':        value.hosts[0].name,
 				'name':          value.description,
 			};
 			triggerList.push(item);
